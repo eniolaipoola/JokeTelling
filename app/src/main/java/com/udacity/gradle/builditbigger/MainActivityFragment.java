@@ -1,13 +1,16 @@
 package com.udacity.gradle.builditbigger;
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
+import android.widget.TextView;
+import androidx.fragment.app.Fragment;
+import com.eniola.jokelibrary.Joke;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+import com.udacity.gradle.builditbigger.utils.APPConstant;
 
 
 /**
@@ -22,6 +25,12 @@ public class MainActivityFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_main, container, false);
+
+        Joke myJoke = new Joke();
+        String tellJoke = myJoke.tellAFunnyJoke();
+        TextView jokeTextView = root.findViewById(R.id.joke_text_view);
+        jokeTextView.setText(tellJoke);
+        Log.d(APPConstant.DEBUG_TAG, "The joke string is " + tellJoke);
 
         AdView mAdView = (AdView) root.findViewById(R.id.adView);
         // Create an ad request. Check logcat output for the hashed device ID to
