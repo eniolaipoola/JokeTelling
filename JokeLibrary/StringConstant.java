@@ -8,7 +8,7 @@ import javax.annotation.Nonnull;
  * Created on 08-Nov-2019
  */
 
-public class APPConstant {
+public class StringConstant {
 
     @Nonnull
     public static String DEBUG_TAG = "Debug==";

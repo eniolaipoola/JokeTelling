@@ -5,4 +5,15 @@
     <string name="button_text">Tell Joke</string>
     <string name="action_settings">Settings</string>
     <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
+
+
+    <!--All Joke strings
+    <string name="joke_1"> There’s no menu: You get what you deserve.</string>
+    <string name="joke_2"> </string>
+    <string name="joke_3"> </string>
+    <string name="joke_4"> </string>
+    <string name="joke_5"> </string>
+    <string name="joke_6"> </string>
+    <string name="joke_7"> </string>
+    -->
 </resources>

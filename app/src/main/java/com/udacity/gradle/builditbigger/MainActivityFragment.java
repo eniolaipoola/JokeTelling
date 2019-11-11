@@ -12,11 +12,13 @@ import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.udacity.gradle.builditbigger.utils.APPConstant;
 
+import java.util.ArrayList;
 
 /**
  * A placeholder fragment containing a simple view.
  */
 public class MainActivityFragment extends Fragment {
+    ArrayList<String> allJokes;
 
     public MainActivityFragment() {
     }
@@ -26,11 +28,15 @@ public class MainActivityFragment extends Fragment {
                              Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_main, container, false);
 
-        Joke myJoke = new Joke();
-        String tellJoke = myJoke.tellAFunnyJoke();
+        Joke myJokeLibrary = new Joke();
+        String tellJoke = myJokeLibrary.tellAFunnyJoke();
         TextView jokeTextView = root.findViewById(R.id.joke_text_view);
         jokeTextView.setText(tellJoke);
         Log.d(APPConstant.DEBUG_TAG, "The joke string is " + tellJoke);
+
+        //check the array size of jokes
+        allJokes = myJokeLibrary.getJokes();
+        Log.d(APPConstant.DEBUG_TAG, "All joke arraylist has the following size " + allJokes.size());
 
         AdView mAdView = (AdView) root.findViewById(R.id.adView);
         // Create an ad request. Check logcat output for the hashed device ID to
@@ -39,6 +45,7 @@ public class MainActivityFragment extends Fragment {
         AdRequest adRequest = new AdRequest.Builder()
                 .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
                 .build();
+        Log.d(APPConstant.DEBUG_TAG, "Did it get here?" + adRequest);
         mAdView.loadAd(adRequest);
         return root;
     }
