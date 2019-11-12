@@ -1,4 +1,4 @@
-package com.udacity.gradle.builditbigger;
+package com.udacity.gradle.builditbigger.UIs;
 
 import android.os.Bundle;
 import android.util.Log;
@@ -6,12 +6,10 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
-
 import androidx.appcompat.app.AppCompatActivity;
-
 import com.eniola.jokelibrary.Joke;
+import com.udacity.gradle.builditbigger.R;
 import com.udacity.gradle.builditbigger.utils.APPConstant;
-
 
 public class MainActivity extends AppCompatActivity {
 
