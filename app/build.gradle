@@ -60,6 +60,11 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
 
+    //########################### RecyclerView and CardView##################################
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+
+
     testImplementation 'junit:junit:4.12'
     implementation project(':JokeLibrary')
 }

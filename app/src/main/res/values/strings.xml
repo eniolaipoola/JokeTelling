@@ -1,19 +1,13 @@
 <resources>
     <string name="app_name">Build it Bigger</string>
+
     <string name="instructions">Press the button for a delicious joke!</string>
+    <string name="paid_instructions">Press the button for a delicious joke (Paid Flavor)!</string>
     <string name="dummy_joke">Dummy Joke</string>
     <string name="button_text">Tell Joke</string>
     <string name="action_settings">Settings</string>
     <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
 
+    <string name="current_joke">Interesting Joke!</string>
 
-    <!--All Joke strings
-    <string name="joke_1"> There’s no menu: You get what you deserve.</string>
-    <string name="joke_2"> </string>
-    <string name="joke_3"> </string>
-    <string name="joke_4"> </string>
-    <string name="joke_5"> </string>
-    <string name="joke_6"> </string>
-    <string name="joke_7"> </string>
-    -->
 </resources>

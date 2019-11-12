@@ -1,4 +1,4 @@
-package com.udacity.gradle.builditbigger.UIs;
+package com.udacity.gradle.builditbigger;
 
 import android.os.Bundle;
 import android.util.Log;

@@ -1,4 +1,4 @@
-package com.udacity.gradle.builditbigger.UIs;
+package com.udacity.gradle.builditbigger;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,9 +13,8 @@ import com.eniola.jokelibrary.Joke;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.udacity.gradle.builditbigger.R;
-import com.udacity.gradle.builditbigger.UIs.JokeActivity;
+import com.udacity.gradle.builditbigger.JokeActivity;
 import com.udacity.gradle.builditbigger.utils.APPConstant;
-
 import java.util.ArrayList;
 
 /**
@@ -40,7 +39,7 @@ public class MainActivityFragment extends Fragment {
 
         //check the array size of jokes
         allJokes = myJokeLibrary.getJokes();
-        Log.d(APPConstant.DEBUG_TAG, "All joke arraylist has the following size " + allJokes.size());
+        Log.d(APPConstant.DEBUG_TAG, "All joke array list has the following size in jokeactivity " + allJokes.size());
 
         //display jokes on another activity
         getJokes = root.findViewById(R.id.getJokeButton);
@@ -48,6 +47,7 @@ public class MainActivityFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getActivity(), JokeActivity.class);
+                intent.putExtra("jokes", allJokes);
                 startActivity(intent);
             }
         });
