@@ -4,9 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.util.Pair;
 
 import com.udacity.gradle.builditbigger.R;
 import com.udacity.gradle.builditbigger.utils.APPConstant;
@@ -20,6 +22,8 @@ public class JokeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_joke);
+
+        //new GoogleCloudEndpointAsyncTask().execute(new Pair<Context, String>(this, "Eniola"));
 
         //get all Jokes
         Intent intent = getIntent();
