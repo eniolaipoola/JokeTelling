@@ -40,7 +40,6 @@ public class MainActivity extends AppCompatActivity {
         Joke myJokeLibrary = new Joke();
         //check the array size of jokes
         allJokes = myJokeLibrary.getJokes();
-        Log.d(APPConstant.DEBUG_TAG, "All joke array list has the following size in jokeactivity " + allJokes.size());
 
         Button getJokeButton = findViewById(R.id.getJokeButton);
         getJokeButton.setOnClickListener(new View.OnClickListener() {

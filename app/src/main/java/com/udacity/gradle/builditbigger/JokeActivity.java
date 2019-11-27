@@ -32,13 +32,11 @@ public class JokeActivity extends AppCompatActivity implements JokeListener {
 
         Log.d(APPConstant.DEBUG_TAG, "The array of jokes converted to string is" + jokes);
         List<String> jokeItems = Arrays.asList(jokes.split(","));
-        Log.d(APPConstant.DEBUG_TAG, "item size is " + jokeItems.size());
         jokeArrayList = new ArrayList<String>();
         for(int i = 0; i < jokeItems.size(); i++){
             jokeArrayList.add(jokeItems.get(i));
         }
 
-        // todo: pass array to recyclerview adapter
         //get the recyclerview
         RecyclerView recyclerView = findViewById(R.id.joke_recycler_view);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));

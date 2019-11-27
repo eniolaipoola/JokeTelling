@@ -54,7 +54,6 @@ public class GoogleCloudEndpointAsyncTask extends AsyncTask<Pair<Context, String
 
     @Override
     protected void onPostExecute(String result) {
-        Log.d(APPConstant.DEBUG_TAG, "Result from the action is " + result);
         jokeListener.OnJokeRetrieved(result);
     }
 }

@@ -28,7 +28,6 @@ public class JokeAdapter extends RecyclerView.Adapter<JokeAdapter.JokeAdapterVie
     @Override
     public void onBindViewHolder(@NonNull JokeAdapterViewHolder holder, int position) {
         String jokeString = jokesArray.get(position);
-        Log.d(APPConstant.DEBUG_TAG, "current joke in the array" + jokeString);
         holder.jokeTextView.setText(jokeString);
     }
 
