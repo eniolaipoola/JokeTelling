@@ -7,9 +7,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.udacity.gradle.builditbigger.utils.APPConstant;
-
 import java.util.ArrayList;
 
 public class JokeAdapter extends RecyclerView.Adapter<JokeAdapter.JokeAdapterViewHolder> {

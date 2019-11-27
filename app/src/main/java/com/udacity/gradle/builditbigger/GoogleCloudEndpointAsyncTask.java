@@ -22,13 +22,18 @@ import java.io.IOException;
 public class GoogleCloudEndpointAsyncTask extends AsyncTask<Pair<Context, String>, Void, String> {
     private static MyApi myApi = null;
     private Context mContext;
+    private JokeListener jokeListener;
+
+    GoogleCloudEndpointAsyncTask(JokeListener jokeListener){
+        this.jokeListener = jokeListener;
+    }
 
     @Override
     protected String doInBackground(Pair<Context, String>... pairs) {
         if(myApi == null){
             MyApi.Builder builder = new MyApi.Builder(AndroidHttp.newCompatibleTransport(),
                     new AndroidJsonFactory(), null)
-                    .setRootUrl("http://192.168.137.193:8080/a_h/api/")
+                    .setRootUrl("http://10.0.2.2:8080/_ah/api/")
                     .setGoogleClientRequestInitializer(new GoogleClientRequestInitializer() {
                         @Override
                         public void initialize(AbstractGoogleClientRequest<?> request) throws IOException {
@@ -40,21 +45,16 @@ public class GoogleCloudEndpointAsyncTask extends AsyncTask<Pair<Context, String
 
         }
 
-        mContext = pairs[0].first;
-        String name = pairs[0].second;
-
         try {
-            return  myApi.sayHi(name).execute().getData();
+            return myApi.fetchJokeString().execute().getJokeString();
         } catch (IOException ioException){
             return ioException.getMessage();
         }
     }
 
-
     @Override
     protected void onPostExecute(String result) {
         Log.d(APPConstant.DEBUG_TAG, "Result from the action is " + result);
-        Toast.makeText(mContext, "Hello, this is working i guess" , Toast.LENGTH_LONG).show();
-        super.onPostExecute(result);
+        jokeListener.OnJokeRetrieved(result);
     }
 }

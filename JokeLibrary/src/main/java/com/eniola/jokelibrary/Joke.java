@@ -3,9 +3,9 @@ package com.eniola.jokelibrary;
 import java.util.ArrayList;
 
 public class Joke {
-
     public String tellAFunnyJoke() {
-        return "This is a very funny joke";
+        String jokesInString = "There’s no menu You get what you deserve, Sleep is a weak substitute for coffee, What do you get a hunter for his birthday? A birthday pheasant";
+        return jokesInString;
     }
 
     public ArrayList<String> getJokes(){
@@ -19,8 +19,8 @@ public class Joke {
         allJokes.add("Sleep is a weak substitute for coffee.");
         allJokes.add("Did you hear about the monkeys who shared an Amazon account? They were Prime mates.");
         allJokes.add("What do you get a hunter for his birthday?\n" +
-                "\n" + "A birthday pheasant");
-        allJokes.add("I tell people I’m on a low-carb diet. But in reality, " +
+                "\n" + "A birthday pheasant.");
+        allJokes.add("I tell people I’m on a low-carb diet, but in reality, " +
                 "I just eat pasta while lying on the floor.");
 
         return allJokes;
