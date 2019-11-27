@@ -1,12 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
     <application>
-        <activity android:name="com.udacity.gradle.builditbigger.paid.PaidMainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.Main"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
-                <category android:name="android.intent.category.DEFAULT"/>
-            </intent-filter>
-        </activity>
+        <activity android:name="com.udacity.gradle.builditbigger.paid.MainActivity"></activity>
     </application>
 </manifest>
