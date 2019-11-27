@@ -3,16 +3,13 @@ package com.udacity.gradle.builditbigger;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.util.Pair;
-
 import com.udacity.gradle.builditbigger.R;
 import com.udacity.gradle.builditbigger.utils.APPConstant;
-
 import java.util.ArrayList;
 
 public class JokeActivity extends AppCompatActivity {

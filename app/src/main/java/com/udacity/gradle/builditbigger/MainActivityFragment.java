@@ -24,8 +24,7 @@ public class MainActivityFragment extends Fragment {
     ArrayList<String> allJokes;
     Button getJokes;
 
-    public MainActivityFragment() {
-    }
+    public MainActivityFragment() {}
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

@@ -16,7 +16,6 @@ public class JokeAdapter extends RecyclerView.Adapter<JokeAdapter.JokeAdapterVie
     ArrayList<String> jokesArray;
     private LayoutInflater layoutInflater;
 
-
     public JokeAdapter(ArrayList<String> jokes){
         this.jokesArray = jokes;
     }
