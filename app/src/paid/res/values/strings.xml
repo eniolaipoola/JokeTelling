@@ -1,4 +1,6 @@
 <resources>
 
     <string name="app_name">Build it Bigger Paid Version</string>
+    <string name="variant_text_view">Paid Version</string>
+    <string name="variant_description">You are currently on the paid version of the Jokes application, enjoy!</string>
 </resources>

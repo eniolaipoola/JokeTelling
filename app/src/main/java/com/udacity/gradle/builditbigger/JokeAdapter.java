@@ -7,15 +7,12 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.udacity.gradle.builditbigger.utils.APPConstant;
-
 import java.util.ArrayList;
 
 public class JokeAdapter extends RecyclerView.Adapter<JokeAdapter.JokeAdapterViewHolder> {
     ArrayList<String> jokesArray;
     private LayoutInflater layoutInflater;
-
 
     public JokeAdapter(ArrayList<String> jokes){
         this.jokesArray = jokes;
@@ -31,7 +28,6 @@ public class JokeAdapter extends RecyclerView.Adapter<JokeAdapter.JokeAdapterVie
     @Override
     public void onBindViewHolder(@NonNull JokeAdapterViewHolder holder, int position) {
         String jokeString = jokesArray.get(position);
-        Log.d(APPConstant.DEBUG_TAG, "current joke in the array" + jokeString);
         holder.jokeTextView.setText(jokeString);
     }
 
