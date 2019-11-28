@@ -23,6 +23,7 @@ public class GoogleCloudEndpointAsyncTask extends AsyncTask<Pair<Context, String
     private static MyApi myApi = null;
     private Context mContext;
     private JokeListener jokeListener;
+    private String asyncTaskResult;
 
     GoogleCloudEndpointAsyncTask(JokeListener jokeListener){
         this.jokeListener = jokeListener;
@@ -48,12 +49,18 @@ public class GoogleCloudEndpointAsyncTask extends AsyncTask<Pair<Context, String
         try {
             return myApi.fetchJokeString().execute().getJokeString();
         } catch (IOException ioException){
-            return ioException.getMessage();
+            Log.i("Error fetching jokes", ioException.getMessage());
+            return null;
         }
     }
 
     @Override
     protected void onPostExecute(String result) {
+        asyncTaskResult = result;
         jokeListener.OnJokeRetrieved(result);
+    }
+
+    public String getAsyncTaskResult() {
+        return asyncTaskResult;
     }
 }
