@@ -1,4 +1,5 @@
 <resources>
+    <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
     <string name="app_name">Build it Bigger Free Version</string>
     <string name="variant_text_view">Free Version</string>
     <string name="variant_description">You are currently on the free version of the Jokes application,
