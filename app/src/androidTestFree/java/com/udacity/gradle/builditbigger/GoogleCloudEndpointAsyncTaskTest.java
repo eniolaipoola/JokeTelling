@@ -37,9 +37,10 @@ public class GoogleCloudEndpointAsyncTaskTest {
         asyncTask = new GoogleCloudEndpointAsyncTask(jokeListener);
 
         try {
-
             asyncTask.execute().get();
             assertNotNull(asyncTask.getAsyncTaskResult());
+            assertNotNull("joke item is not null", jokeItem);
+            assertFalse(TextUtils.isEmpty(jokeItem));
 
         } catch (ExecutionException e) {
             e.printStackTrace();

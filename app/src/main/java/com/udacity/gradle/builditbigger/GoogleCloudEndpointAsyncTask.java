@@ -49,7 +49,8 @@ public class GoogleCloudEndpointAsyncTask extends AsyncTask<Pair<Context, String
         try {
             return myApi.fetchJokeString().execute().getJokeString();
         } catch (IOException ioException){
-            return ioException.getMessage();
+            Log.i("Error fetching jokes", ioException.getMessage());
+            return null;
         }
     }
 
