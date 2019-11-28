@@ -9,6 +9,8 @@ import com.eniola.jokelibrary.Joke;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
+import java.util.concurrent.ExecutionException;
+
 import static org.junit.Assert.*;
 
 /**
@@ -21,6 +23,7 @@ public class GoogleCloudEndpointAsyncTaskTest {
 
     private String jokeItem = null;
     JokeListener jokeListener;
+    GoogleCloudEndpointAsyncTask asyncTask;
 
     @Test
     public void testGoogleCloudEndpointAsyncTask(){
@@ -31,9 +34,19 @@ public class GoogleCloudEndpointAsyncTaskTest {
             }
         };
 
-        new GoogleCloudEndpointAsyncTask(jokeListener).execute();
-        assertNotNull("jokeItem not null", jokeItem);
-        assertFalse(TextUtils.isEmpty(jokeItem));
+        asyncTask = new GoogleCloudEndpointAsyncTask(jokeListener);
+
+        try {
+            asyncTask.execute().get();
+            assertNotNull(asyncTask.getAsyncTaskResult());
+            assertNotNull("joke item is not null", jokeItem);
+            assertFalse(TextUtils.isEmpty(jokeItem));
+
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
 }

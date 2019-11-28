@@ -31,7 +31,6 @@ public class JokeActivityTest {
     @Test
     public void assertJokeNotEmpty(){
         onView(withId(R.id.jokeDescriptionTextView));
-        //assertNotNull();
     }
 
 }
